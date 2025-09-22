@@ -59,7 +59,7 @@ const productData = {
         latency: '<50ms'
       },
       {
-        name: 'ADAS Interface & ROS Packages',
+        name: 'ADAS Platform & ROS Integration',
         description: 'Stereo vision-based depth estimation for 3D scene understanding and obstacle avoidance, with native ROS2 nodes and packages for seamless integration with robotics workflows and autonomous systems.',
         icon: '🤖',
         accuracy: 'Open-source',
