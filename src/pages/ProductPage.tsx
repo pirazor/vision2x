@@ -22,9 +22,12 @@ const productData = {
     image: '/VisionSense.png',
     media: [
       { type: 'image', src: '/VisionSense.png', alt: 'VisionSense Hardware' },
-      { type: 'image', src: '/VisionSense2.png', alt: 'VisionSense Hardware' },
+      { type: 'image', src: '/VisionSense2.png', alt: 'VisionSense Installation' },
+      { type: 'image', src: '/visionsense3.jpg', alt: 'VisionSense Hardware' },
+      { type: 'image', src: '/visionsense4.jpg', alt: 'VisionSense Hardware' },
       { type: 'video', src: '/visionsense-narrow.webm', alt: 'VisionSense Demo Video', thumbnail: '/VisionSense.png' },
-      { type: 'video', src: '/machine-vision.webm', alt: 'VisionSense in Action', thumbnail: '/night-time-detect2.png' }
+      { type: 'video', src: '/autovision-cut.webm', alt: 'AutoVision Platform', thumbnail: '/autovision.png' },
+      { type: 'video', src: '/daylight-demo.webm', alt: 'VisionSense in Action', thumbnail: '/object-detect.png' }
     ],
     features: [
       'NVIDIA Jetson Orin Nano (8GB)',
@@ -711,7 +714,7 @@ const ProductPage = () => {
                               {/* Object Detection Image */}
                               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
                                 <img 
-                                  src="/object-detection2.png" 
+                                  src="/object-detect.png" 
                                   alt="Object Detection Visualization"
                                   className="w-full h-auto object-cover"
                                 />
