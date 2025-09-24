@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export interface CartItem {
+interface CartItem {
   id: string;
   name: string;
   price: number;
@@ -11,7 +11,7 @@ export interface CartItem {
   mode: 'payment' | 'subscription';
 }
 
-export interface DiscountCode {
+interface DiscountCode {
   code: string;
   type: 'percentage' | 'fixed';
   value: number;
