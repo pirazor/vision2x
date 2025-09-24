@@ -9,7 +9,7 @@ const productData = {
   visionsense: {
     id: 'visionsense',
     name: 'VisionSense',
-    tagline: 'Research & Development Platform',
+    //tagline: 'Research & Development Platform',
     tagline: 'ADS/ADAS Researchers, Robotics Labs, Fleet Managers',
     description: 'Advanced perception system for autonomous vehicle research with stereo cameras and pre-trained AI models. Built on NVIDIA Jetson Orin Nano with comprehensive AutoVision software stack.',
     price: 945,
@@ -291,6 +291,44 @@ const ProductPage = () => {
   const [addingToCart, setAddingToCart] = useState(false);
 
   const product = productData[productId as keyof typeof productData];
+  const mediaItems = product?.media ?? [];
+  const primaryMedia = mediaItems.slice(0, 5);
+  const overflowMedia = mediaItems.slice(5);
+  const activeMediaItem = mediaItems[activeMedia] ?? mediaItems[0];
+
+  const renderMediaThumbnails = (items: typeof mediaItems, offset = 0) =>
+    items.map((media, index) => {
+      const itemIndex = offset + index;
+      return (
+        <button
+          key={`${media.src}-${itemIndex}`}
+          onClick={() => setActiveMedia(itemIndex)}
+          className={`relative w-full h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
+            activeMedia === itemIndex
+              ? 'border-teal-400 shadow-lg'
+              : 'border-gray-200 dark:border-slate-600 hover:border-teal-300'
+          }`}
+        >
+          <div className="relative w-full h-full">
+            <img
+              src={media.type === 'video' ? media.thumbnail : media.src}
+              alt={media.alt}
+              className="w-full h-full object-cover"
+            />
+            {media.type === 'video' && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-black/60 rounded-full p-1">
+                  <Play className="w-3 h-3 text-white" />
+                </div>
+              </div>
+            )}
+            <div className="absolute top-1 right-1 text-xs">
+              {media.type === 'image' ? '📷' : '🎥'}
+            </div>
+          </div>
+        </button>
+      );
+    });
 
   // Load favorite status on component mount
   React.useEffect(() => {
@@ -430,19 +468,19 @@ const ProductPage = () => {
             <div className="bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-slate-700/50 transition-colors duration-300 flex-1 flex flex-col">
               {/* Main Media Display */}
               <div className="flex-1 bg-gray-100 dark:bg-slate-700 rounded-xl mb-6 overflow-hidden relative">
-                {product.media[activeMedia].type === 'image' ? (
+                {activeMediaItem && activeMediaItem.type === 'image' ? (
                   <img
-                    src={product.media[activeMedia].src}
-                    alt={product.media[activeMedia].alt}
+                    src={activeMediaItem.src}
+                    alt={activeMediaItem.alt}
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                   />
-                ) : (
+                ) : activeMediaItem ? (
                   <div className="relative w-full h-full">
                     <video
-                      src={product.media[activeMedia].src}
+                      src={activeMediaItem.src}
                       className="w-full h-full object-contain"
                       controls
-                      poster={product.media[activeMedia].thumbnail}
+                      poster={activeMediaItem.thumbnail}
                      ref={(videoRef) => {
                        if (videoRef) {
                          videoRef.volume = 0.1; // Set volume to 10%
@@ -467,41 +505,24 @@ const ProductPage = () => {
                       </div>
                     </div>
                   </div>
-                )}
+                ) : null}
               </div>
 
               {/* Media Thumbnails */}
-              <div className="flex space-x-4 overflow-x-auto">
-                {product.media.map((media, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveMedia(index)}
-                    className={`flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                      activeMedia === index 
-                        ? 'border-teal-400 shadow-lg' 
-                        : 'border-gray-200 dark:border-slate-600 hover:border-teal-300'
-                    }`}
-                  >
-                    <div className="relative w-full h-full">
-                      <img
-                        src={media.type === 'video' ? media.thumbnail : media.src}
-                        alt={media.alt}
-                        className="w-full h-full object-cover"
-                      />
-                      {media.type === 'video' && (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="bg-black/60 rounded-full p-1">
-                            <Play className="w-3 h-3 text-white" />
-                          </div>
-                        </div>
-                      )}
-                      <div className="absolute top-1 right-1 text-xs">
-                        {media.type === 'image' ? '📷' : '🎥'}
-                      </div>
-                    </div>
-                  </button>
-                ))}
+              <div
+                className={`grid gap-4 ${
+                  overflowMedia.length
+                    ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5'
+                    : 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'
+                }`}
+              >
+                {renderMediaThumbnails(primaryMedia)}
               </div>
+              {overflowMedia.length > 0 && (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
+                  {renderMediaThumbnails(overflowMedia, primaryMedia.length)}
+                </div>
+              )}
             </div>
           </div>
 
