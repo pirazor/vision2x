@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 
 const Footer = () => {

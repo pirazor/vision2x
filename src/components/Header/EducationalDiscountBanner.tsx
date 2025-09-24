@@ -57,7 +57,7 @@ const EducationalDiscountBanner = () => {
         setSubmitMessage(null);
       }, 3000);
       
-    } catch (error) {
+    } catch (_error) {
       setSubmitMessage({ type: 'error', text: 'Failed to submit application. Please try again.' });
     } finally {
       setIsSubmitting(false);
