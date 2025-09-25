@@ -735,7 +735,7 @@ const ProductPage = () => {
                               {/* Object Detection Image */}
                               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
                                 <img 
-                                  src="/object-detect.png" 
+                                  src="https://connectedwise.store/vision2.com/media/object-detect.png" 
                                   alt="Object Detection Visualization"
                                   className="w-full h-auto object-cover"
                                 />
