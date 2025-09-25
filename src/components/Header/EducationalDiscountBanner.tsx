@@ -51,9 +51,11 @@ const EducationalDiscountBanner = () => {
     }
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => {
-        submitTimeoutRef.current = window.setTimeout(resolve, 2000);
+      // Simulate form submission with proper timeout management
+      await new Promise<void>((resolve) => {
+        submitTimeoutRef.current = window.setTimeout(() => {
+          resolve();
+        }, 2000);
       });
       
       setSubmitMessage({ 
