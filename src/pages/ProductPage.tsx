@@ -871,7 +871,7 @@ const ProductPage = () => {
                               {/* Lane Detection Image */}
                               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
                                 <img 
-                                  src="/lane-detection.png" 
+                                  src="https://connectedwise.store/vision2.com/media/lane-detection.png" 
                                   alt="Lane Detection Visualization"
                                   className="w-full h-auto object-cover"
                                 />
