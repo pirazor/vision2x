@@ -60,7 +60,7 @@ const SupportPage = () => {
         type: 'bot',
         message: 'Thank you for your message! Our support team will respond shortly. In the meantime, you can check our FAQ section above for quick answers.',
         timestamp: new Date(),
-        avatar: '/Logo_Symbol_Light.png'
+        avatar: 'https://connectedwise.store/vision2.com/media/Logo_Symbol_Light.png'
       };
       setChatMessages(prev => [...prev, botResponse]);
     }, 1500);
