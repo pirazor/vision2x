@@ -21,13 +21,13 @@ const productData = {
     mode: 'payment' as const,
     image: '/VisionSense.png',
     media: [
-      { type: 'image', src: '/VisionSense.png', alt: 'VisionSense Hardware' },
-      { type: 'image', src: '/VisionSense2.png', alt: 'VisionSense Installation' },
-      { type: 'image', src: '/visionsense3.jpg', alt: 'VisionSense Hardware' },
-      { type: 'image', src: '/visionsense4.jpg', alt: 'VisionSense Hardware' },
-      { type: 'video', src: '/visionsense-narrow.webm', alt: 'VisionSense Demo Video', thumbnail: '/VisionSense.png' },
-      { type: 'video', src: '/autovision-cut.webm', alt: 'AutoVision Platform', thumbnail: '/autovision.png' },
-      { type: 'video', src: '/daylight-demo.webm', alt: 'VisionSense in Action', thumbnail: '/object-detect.png' }
+      { type: 'image', src: 'https://connectedwise.store/vision2.com/media/VisionSense.png', alt: 'VisionSense Hardware' },
+      { type: 'image', src: 'https://connectedwise.store/vision2.com/media/VisionSense2.png', alt: 'VisionSense Installation' },
+      { type: 'image', src: 'https://connectedwise.store/vision2.com/media/visionsense3.jpg', alt: 'VisionSense Hardware' },
+      { type: 'image', src: 'https://connectedwise.store/vision2.com/media/visionsense4.jpg', alt: 'VisionSense Hardware' },
+      { type: 'video', src: 'https://connectedwise.store/vision2.com/media/visionsense-narrow.webm', alt: 'VisionSense Demo Video', thumbnail: '/VisionSense.png' },
+      { type: 'video', src: 'https://connectedwise.store/vision2.com/media/autovision-cut.webm', alt: 'AutoVision Platform', thumbnail: '/autovision.png' },
+      { type: 'video', src: 'https://connectedwise.store/vision2.com/media/daylight-demo.webm', alt: 'VisionSense in Action', thumbnail: '/object-detect.png' }
     ],
     features: [
       'NVIDIA Jetson Orin Nano (8GB)',
