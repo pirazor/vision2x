@@ -195,7 +195,7 @@ const productData = {
     mode: 'payment' as const,
     image: '/VisionConnect.png',
     media: [
-      { type: 'image', src: '/VisionConnect.png', alt: 'VisionConnect Platform' }
+      { type: 'image', src: 'https://connectedwise.store/vision2.com/media/VisionConnect.png', alt: 'VisionConnect Platform' }
     ],
     features: [
       'Real-time Collision Detection',
