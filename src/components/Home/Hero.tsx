@@ -24,7 +24,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover opacity-60 md:opacity-80"
         >
-          <source src="/visionsense-narrow.webm" type="video/webm" />
+          <source src="https://connectedwise.store/vision2.com/media/visionsense-narrow.webm" type="video/webm" />
         </video>
         
         {/* Modern Price Badge - positioned over video */}
@@ -169,7 +169,7 @@ const Hero = () => {
             {/* Video Container */}
             <div className="bg-black rounded-xl overflow-hidden shadow-2xl">
               <video
-                src="/machine-vision.webm"
+                src="https://connectedwise.store/vision2.com/media/machine-vision.webm"
                 className="w-full h-auto"
                 controls
                 autoPlay

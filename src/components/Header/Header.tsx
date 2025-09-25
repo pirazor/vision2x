@@ -20,7 +20,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src={theme === 'light' ? '/Logo_Symbol_Light.png' : '/Logo_Symbol_Dark.png'}
+              src={theme === 'light' ? 'https://connectedwise.store/vision2.com/media/Logo_Symbol_Light.png' : 'https://connectedwise.store/vision2.com/media/Logo_Symbol_Dark.png'}
               alt="Vision2x Logo"
               className="w-12 h-12"
             />

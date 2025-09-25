@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { X, GraduationCap, Mail, Send, Building, User, FileText } from 'lucide-react';
 
 const EducationalDiscountBanner = () => {
@@ -14,6 +14,22 @@ const EducationalDiscountBanner = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+
+  // Refs to store timer IDs for cleanup
+  const submitTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const resetFormTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Cleanup timers on unmount or HMR
+  useEffect(() => {
+    return () => {
+      if (submitTimeoutRef.current) {
+        clearTimeout(submitTimeoutRef.current);
+      }
+      if (resetFormTimeoutRef.current) {
+        clearTimeout(resetFormTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -35,8 +51,12 @@ const EducationalDiscountBanner = () => {
     }
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Simulate form submission with proper timeout management
+      await new Promise<void>((resolve) => {
+        submitTimeoutRef.current = window.setTimeout(() => {
+          resolve();
+        }, 2000);
+      });
       
       setSubmitMessage({ 
         type: 'success', 
@@ -44,7 +64,7 @@ const EducationalDiscountBanner = () => {
       });
       
       // Reset form after successful submission
-      setTimeout(() => {
+      resetFormTimeoutRef.current = window.setTimeout(() => {
         setShowForm(false);
         setFormData({
           fullName: '',

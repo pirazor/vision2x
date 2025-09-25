@@ -1,12 +1,12 @@
 import React from 'react';
 
 const partners = [
-  { name: 'NVIDIA', logo: 'NV', image: '/nvidia-logo.png' },
-  { name: 'CUTR', logo: 'CUTR', image: '/cutr.png' },
-  { name: 'CARMA', logo: 'CARMA', image: '/carma.png' },
-  { name: 'UW Madison', logo: 'UWM', image: '/uwm-logo.png' },
-  { name: 'ADASTEC', logo: 'ADA', image: '/adastec.png' },
-  { name: 'Brandmotion', logo: 'BM', image: '/brandmotion.png' }
+  { name: 'NVIDIA', logo: 'NV', image: 'https://connectedwise.store/vision2.com/media/nvidia-logo.png' },
+  { name: 'CUTR', logo: 'CUTR', image: 'https://connectedwise.store/vision2.com/media/cutr.png' },
+  { name: 'CARMA', logo: 'CARMA', image: 'https://connectedwise.store/vision2.com/media/carma.png' },
+  { name: 'UW Madison', logo: 'UWM', image: 'https://connectedwise.store/vision2.com/media/uwm-logo.png' },
+  { name: 'ADASTEC', logo: 'ADA', image: 'https://connectedwise.store/vision2.com/media/adastec.png' },
+  { name: 'Brandmotion', logo: 'BM', image: 'https://connectedwise.store/vision2.com/media/brandmotion.png' }
 ];
 
 const IndustryPartners = () => {
