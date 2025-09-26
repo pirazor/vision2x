@@ -541,34 +541,51 @@ const ProductPage = () => {
                   <div className="space-y-6 mb-8">
                     {/* Camera Configuration */}
                     <div className="space-y-3">
-                      <div className="bg-white dark:bg-slate-700 rounded-lg p-4 text-center border border-gray-200 dark:border-slate-600">
-                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-2">
-                          <span className="text-white text-xs">🏗️</span>
-                        </div>
-                        <div className="font-semibold text-slate-900 dark:text-white text-sm">Modular</div>
-                        <div className="font-semibold text-slate-900 dark:text-white text-sm">Architecture</div>
-                      </div>
-                      <div className="bg-white dark:bg-slate-700 rounded-lg p-4 text-center border border-gray-200 dark:border-slate-600">
-                        <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-2">
-                          <span className="text-white text-xs">⚡</span>
-                        </div>
-                        <div className="font-semibold text-slate-900 dark:text-white text-sm">High</div>
-                        <div className="font-semibold text-slate-900 dark:text-white text-sm">Performance</div>
-                      </div>
+                      <h4 className="text-md font-medium text-slate-900 dark:text-white">Camera Configuration</h4>
+                     <select
+                       value={cameraConfig}
+                       onChange={(e) => setCameraConfig(e.target.value)}
+                       name="camera-config"
+                       className="w-full px-3 py-3 text-sm border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-teal-400 focus:border-transparent bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300"
+                     >
+                       <option value="standard">Standard: 3 front-facing cameras</option>
+                       <option value="alternative">Alternative: 2 front & 1 rear cameras</option>
+                     </select>
                     </div>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 transition-colors duration-300">Introductory Offer - Only 19 Left</p>
-                  </div>
-                </div>
-              )}
 
-              {/* Pricing for unavailable products */}
-              {!product.available && (
-                <div className="bg-slate-100 dark:bg-slate-700 rounded-xl p-6 mb-6 border-2 border-dashed border-slate-300 dark:border-slate-600 transition-colors duration-300">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-slate-600 dark:text-slate-400 mb-2 transition-colors duration-300">
-                      Coming Soon
+                    {/* AI Processor Options */}
+                    <div className="space-y-3">
+                      <h4 className="text-md font-medium text-slate-900 dark:text-white">AI Processor Options</h4>
+                     <select
+                       name="ai-processor"
+                       value={aiProcessor}
+                       onChange={(e) => setAiProcessor(e.target.value)}
+                       className="w-full px-3 py-3 text-sm border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-teal-400 focus:border-transparent bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300"
+                     >
+                       <option value="orin-nano">40 TOPS - Orin Nano Super 8GB </option>
+                       <option value="orin-nx-super">117 TOPS - Orin NX Super 8GB </option>
+                       <option value="orin-nx-16gb">157 TOPS - Jetson Orin NX 16GB </option>
+                     </select>
                     </div>
-                    <p className="text-sm text-slate-500 dark:text-slate-500 transition-colors duration-300">This product is currently in development</p>
+                  </div>
+
+                      <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                        ROS2 Native
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                        3D Visualization
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                          Multi-Threading
+                        </span>
+                        <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                          Modular Design
+                        </span>
+                        <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                          Real-time Processing
+                      </span>
+                    </div>
                   </div>
                 </div>
               )}
@@ -776,7 +793,7 @@ const ProductPage = () => {
                               {/* AutoVision Platform Image */}
                               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
                                 <img 
-                                  src="https://connectedwise.store/vision2.com/media/autovision.png" 
+                                  src="https://connectedwise.store/vision2.com/media/AutoVision.png" 
                                   alt="AutoVision 3D ADAS Platform"
                                   className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
@@ -816,18 +833,27 @@ const ProductPage = () => {
                               </div>
 
                               {/* Platform Features */}
-                              <ul className="text-slate-600 dark:text-slate-400 text-xs space-y-1">
-                                <li>• Native ROS2 support (Humble and Iron)</li>
-                                <li>• 3D visualization and debugging interface</li>
-                                <li>• Advanced sensor fusion algorithms</li>
-                                <li>• Real-time data logging and replay</li>
-                                <li>• Modular perception pipeline architecture</li>
-                                <li>• Custom ADAS application development framework</li>
-                                <li>• Stereo vision-based depth estimation</li>
-                                <li>• Seamless robotics workflow integration</li>
-                                <li>• Professional development tools and APIs</li>
-                                <li>• Multi-threading and GPU acceleration support</li>
-                              </ul>
+                              <div className="space-y-4">
+                                <div className="flex items-center space-x-2 text-teal-500 dark:text-teal-400">
+                                  <span>🏗️</span>
+                                  <span className="font-medium">Modular Architecture</span>
+                                </div>
+                                <div className="flex items-center space-x-2 text-orange-500 dark:text-orange-400">
+                                  <span>⚡</span>
+                                  <span className="font-medium">Real-time Processing</span>
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                  <span className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-gray-200 dark:border-slate-600">
+                                    ROS2 Native
+                                  </span>
+                                  <span className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-gray-200 dark:border-slate-600">
+                                    3D Visualization
+                                  </span>
+                                  <span className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-gray-200 dark:border-slate-600">
+                                    Multi-threading
+                                  </span>
+                                </div>
+                              </div>
 
                               {/* GitHub Repository */}
                               <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-800/30">
