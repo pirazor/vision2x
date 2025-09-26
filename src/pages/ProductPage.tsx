@@ -799,14 +799,14 @@ const ProductPage = () => {
                             </div>
                           )}
                           
-                          {capability.name === 'AutoVision Platform & ROS Integration' && (
+                          {capability.name === 'ADAS Platform & ROS Integration' && (
                             <div className="space-y-4">
                               {/* AutoVision Platform Image */}
                               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
                                 <img 
-                                  src="/autovision.png" 
-                                  alt="AutoVision Platform Architecture"
-                                  className="w-full h-auto object-cover"
+                                  src="https://connectedwise.store/vision2.com/media/AutoVision.png" 
+                                  alt="AutoVision 3D ADAS Platform"
+                                  className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                               </div>
                               
@@ -822,7 +822,7 @@ const ProductPage = () => {
                                 </div>
                               </div>
                               <div className="text-sm text-slate-700 dark:text-slate-300">
-                                Complete perception pipeline with modular architecture for autonomous vehicle development
+                                Complete ADAS development environment with 3D visualization tools and native ROS2 integration for advanced autonomous vehicle research and development.
                               </div>
                               
                               {/* Platform Components */}
@@ -844,15 +844,18 @@ const ProductPage = () => {
                               </div>
 
                               {/* Platform Features */}
-                              <div>
-                                <div className="flex flex-wrap gap-2">
-                                  {['Perception Pipeline', 'ROS2 Nodes', 'Python SDK', 'C++ API', 'Docker Support', 'Cloud Integration'].map((feature, idx) => (
-                                    <span key={idx} className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
-                                      {feature}
-                                    </span>
-                                  ))}
-                                </div>
-                              </div>
+                              <ul className="text-slate-600 dark:text-slate-400 text-xs space-y-1">
+                                <li>• Native ROS2 support (Humble and Iron)</li>
+                                <li>• 3D visualization and debugging interface</li>
+                                <li>• Advanced sensor fusion algorithms</li>
+                                <li>• Real-time data logging and replay</li>
+                                <li>• Modular perception pipeline architecture</li>
+                                <li>• Custom ADAS application development framework</li>
+                                <li>• Stereo vision-based depth estimation</li>
+                                <li>• Seamless robotics workflow integration</li>
+                                <li>• Professional development tools and APIs</li>
+                                <li>• Multi-threading and GPU acceleration support</li>
+                              </ul>
 
                               {/* GitHub Repository */}
                               <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-800/30">
