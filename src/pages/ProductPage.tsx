@@ -529,69 +529,67 @@ const ProductPage = () => {
           {/* Product Info */}
           <div className="flex-1 flex flex-col">
             <div className="bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-slate-700/50 flex-1 flex flex-col justify-between">
-              <div>
-                <h1 className="text-3xl font-zen-dots text-slate-900 dark:text-white mb-2 transition-colors duration-300">{product.name}™</h1>
-                <p className="text-lg text-teal-600 dark:text-teal-400 mb-4 transition-colors duration-300">{product.tagline}</p>
-                
-                <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-6 transition-colors duration-300">{getProductDescription()}</p>
+              <h1 className="text-3xl font-zen-dots text-slate-900 dark:text-white mb-2 transition-colors duration-300">{product.name}™</h1>
+              <p className="text-lg text-teal-600 dark:text-teal-400 mb-4 transition-colors duration-300">{product.tagline}</p>
+              
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-6 transition-colors duration-300">{getProductDescription()}</p>
 
-                {/* Configuration Options */}
-                {product.id === 'visionsense' && product.available && (
-                  <div className="bg-gradient-to-r from-teal-50 to-emerald-50 dark:from-teal-900/20 dark:to-emerald-900/20 rounded-xl p-6 border border-teal-200 dark:border-teal-800/50 mb-6 transition-colors duration-300">
-                    {/* Configuration Section */}
-                    <div className="space-y-6 mb-8">
-                      {/* Camera Configuration */}
-                      <div className="space-y-3">
-                        <h4 className="text-md font-medium text-slate-900 dark:text-white">Camera Configuration</h4>
-                       <select
-                         value={cameraConfig}
-                         onChange={(e) => setCameraConfig(e.target.value)}
-                         name="camera-config"
-                         className="w-full px-3 py-3 text-sm border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-teal-400 focus:border-transparent bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300"
-                       >
-                         <option value="standard">Standard: 3 front-facing cameras</option>
-                         <option value="alternative">Alternative: 2 front & 1 rear cameras</option>
-                       </select>
-                      </div>
-
-                      {/* AI Processor Options */}
-                      <div className="space-y-3">
-                        <h4 className="text-md font-medium text-slate-900 dark:text-white">AI Processor Options</h4>
-                       <select
-                         name="ai-processor"
-                         value={aiProcessor}
-                         onChange={(e) => setAiProcessor(e.target.value)}
-                         className="w-full px-3 py-3 text-sm border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-teal-400 focus:border-transparent bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300"
-                       >
-                         <option value="orin-nano">40 TOPS - Orin Nano Super 8GB </option>
-                         <option value="orin-nx-super">117 TOPS - Orin NX Super 8GB </option>
-                         <option value="orin-nx-16gb">157 TOPS - Jetson Orin NX 16GB </option>
-                       </select>
-                      </div>
+              {/* Configuration Options */}
+              {product.id === 'visionsense' && product.available && (
+                <div className="bg-gradient-to-r from-teal-50 to-emerald-50 dark:from-teal-900/20 dark:to-emerald-900/20 rounded-xl p-6 border border-teal-200 dark:border-teal-800/50 mb-6 transition-colors duration-300">
+                  {/* Configuration Section */}
+                  <div className="space-y-6 mb-8">
+                    {/* Camera Configuration */}
+                    <div className="space-y-3">
+                      <h4 className="text-md font-medium text-slate-900 dark:text-white">Camera Configuration</h4>
+                     <select
+                       value={cameraConfig}
+                       onChange={(e) => setCameraConfig(e.target.value)}
+                       name="camera-config"
+                       className="w-full px-3 py-3 text-sm border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-teal-400 focus:border-transparent bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300"
+                     >
+                       <option value="standard">Standard: 3 front-facing cameras</option>
+                       <option value="alternative">Alternative: 2 front & 1 rear cameras</option>
+                     </select>
                     </div>
 
-                        <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                          ROS2 Native
-                        </span>
-                        <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                          3D Visualization
-                        </span>
-                        <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                            Multi-Threading
-                          </span>
-                          <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                            Modular Design
-                          </span>
-                          <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                            Real-time Processing
-                        </span>
-                      </div>
+                    {/* AI Processor Options */}
+                    <div className="space-y-3">
+                      <h4 className="text-md font-medium text-slate-900 dark:text-white">AI Processor Options</h4>
+                     <select
+                       name="ai-processor"
+                       value={aiProcessor}
+                       onChange={(e) => setAiProcessor(e.target.value)}
+                       className="w-full px-3 py-3 text-sm border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-teal-400 focus:border-transparent bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300"
+                     >
+                       <option value="orin-nano">40 TOPS - Orin Nano Super 8GB </option>
+                       <option value="orin-nx-super">117 TOPS - Orin NX Super 8GB </option>
+                       <option value="orin-nx-16gb">157 TOPS - Jetson Orin NX 16GB </option>
+                     </select>
                     </div>
                   </div>
-                )}
-              </div>
-              
+
+                      <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                        ROS2 Native
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                        3D Visualization
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                          Multi-Threading
+                        </span>
+                        <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                          Modular Design
+                        </span>
+                        <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                          Real-time Processing
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Action Buttons */}
               <div className="space-y-4">
                 <div className="flex space-x-4">
