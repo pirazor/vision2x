@@ -541,19 +541,47 @@ const ProductPage = () => {
                   <div className="space-y-6 mb-8">
                     {/* Camera Configuration */}
                     <div className="space-y-3">
-                      <div className="bg-white dark:bg-slate-700 rounded-lg p-4 text-center border border-gray-200 dark:border-slate-600">
-                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-2">
-                          <span className="text-white text-xs">🏗️</span>
-                        </div>
-                        <div className="font-semibold text-slate-900 dark:text-white text-sm">Modular</div>
-                        <div className="font-semibold text-slate-900 dark:text-white text-sm">Architecture</div>
+                      <h4 className="text-md font-medium text-slate-900 dark:text-white">Camera Configuration</h4>
+                     <select
+                       value={cameraConfig}
+                       onChange={(e) => setCameraConfig(e.target.value)}
+                       name="camera-config"
+                       className="w-full px-3 py-3 text-sm border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-teal-400 focus:border-transparent bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300"
+                     >
+                       <option value="standard">Standard: 3 front-facing cameras</option>
+                       <option value="alternative">Alternative: 2 front & 1 rear cameras</option>
+                     </select>
+                    </div>
+
+                    {/* AI Processor Options */}
+                    <div className="space-y-3">
+                      <h4 className="text-md font-medium text-slate-900 dark:text-white">AI Processor Options</h4>
+                     <select
+                       name="ai-processor"
+                       value={aiProcessor}
+                       onChange={(e) => setAiProcessor(e.target.value)}
+                       className="w-full px-3 py-3 text-sm border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-teal-400 focus:border-transparent bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300"
+                     >
+                       <option value="orin-nano">40 TOPS - Orin Nano Super 8GB </option>
+                       <option value="orin-nx-super">117 TOPS - Orin NX Super 8GB </option>
+                       <option value="orin-nx-16gb">157 TOPS - Jetson Orin NX 16GB </option>
+                     </select>
+                    </div>
+                  </div>
+
+                  {/* Pricing Section */}
+                  <div>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="text-lg text-slate-500 dark:text-slate-400 line-through">
+                        ${dynamicPricing.originalPrice?.toLocaleString()}
                       </div>
-                      <div className="bg-white dark:bg-slate-700 rounded-lg p-4 text-center border border-gray-200 dark:border-slate-600">
-                        <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-2">
-                          <span className="text-white text-xs">⚡</span>
+                      <div className="text-4xl font-bold text-slate-900 dark:text-white transition-colors duration-300">
+                        ${dynamicPricing.price?.toLocaleString()}
+                      </div>
+                      <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg animate-pulse">
+                        <div className="text-center">
+                          Save ${((dynamicPricing.originalPrice || 0) - (dynamicPricing.price || 0)).toLocaleString()}
                         </div>
-                        <div className="font-semibold text-slate-900 dark:text-white text-sm">High</div>
-                        <div className="font-semibold text-slate-900 dark:text-white text-sm">Performance</div>
                       </div>
                     </div>
                     <p className="text-sm text-slate-600 dark:text-slate-400 transition-colors duration-300">Introductory Offer - Only 19 Left</p>
@@ -776,7 +804,7 @@ const ProductPage = () => {
                               {/* AutoVision Platform Image */}
                               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
                                 <img 
-                                  src="https://connectedwise.store/vision2.com/media/autovision.png" 
+                                  src="https://connectedwise.store/vision2.com/media/AutoVision.png" 
                                   alt="AutoVision 3D ADAS Platform"
                                   className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
