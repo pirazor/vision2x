@@ -585,18 +585,17 @@ const ProductPage = () => {
                       </div>
                     </div>
                     <p className="text-sm text-slate-600 dark:text-slate-400 transition-colors duration-300">Introductory Offer - Only 19 Left</p>
-                  </div>
-                </div>
-              )}
-
-              {/* Pricing for unavailable products */}
-              {!product.available && (
-                <div className="bg-slate-100 dark:bg-slate-700 rounded-xl p-6 mb-6 border-2 border-dashed border-slate-300 dark:border-slate-600 transition-colors duration-300">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-slate-600 dark:text-slate-400 mb-2 transition-colors duration-300">
-                      Coming Soon
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                        ROS2 Native
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                        3D Visualization
+                      </span>
+                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                        Multi-threading
+                      </span>
                     </div>
-                    <p className="text-sm text-slate-500 dark:text-slate-500 transition-colors duration-300">This product is currently in development</p>
                   </div>
                 </div>
               )}
