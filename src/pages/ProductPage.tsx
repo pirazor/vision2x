@@ -505,7 +505,6 @@ const ProductPage = () => {
                       </div>
                     </div>
                   </>
-                  </div>
                 ) : null}
               </div>
 
