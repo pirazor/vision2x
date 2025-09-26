@@ -98,9 +98,9 @@ const productData = {
     available: false,
     priceId: '',
     mode: 'payment' as const,
-    image: 'https://connectedwise.store/vision2.com/media/VisionRide.png',
+    image: '/VisionRide.png',
     media: [
-      { type: 'image', src: 'https://connectedwise.store/vision2.com/media/VisionRide.png', alt: 'VisionRide Platform' }
+      { type: 'image', src: '/VisionRide.png', alt: 'VisionRide Platform' }
     ],
     features: [
       'Real-time Collision Detection',
@@ -193,7 +193,7 @@ const productData = {
     available: false,
     priceId: '',
     mode: 'payment' as const,
-    image: 'https://connectedwise.store/vision2.com/media/VisionConnect.png',
+    image: '/VisionConnect.png',
     media: [
       { type: 'image', src: 'https://connectedwise.store/vision2.com/media/VisionConnect.png', alt: 'VisionConnect Platform' }
     ],
@@ -569,14 +569,18 @@ const ProductPage = () => {
                     </div>
                   </div>
 
-                          <div className="flex flex-wrap gap-2">
-                            <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-md text-xs font-medium">ROS2 Native</span>
-                            <span className="bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 px-2 py-1 rounded-md text-xs font-medium">3D Visualization</span>
-                            <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-1 rounded-md text-xs font-medium">Sensor Fusion</span>
-                            <span className="bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-2 py-1 rounded-md text-xs font-medium">Real-time Processing</span>
-                            <span className="bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 px-2 py-1 rounded-md text-xs font-medium">Modular Pipeline</span>
-                            <span className="bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-2 py-1 rounded-md text-xs font-medium">Development Framework</span>
-                          </div>
+                  {/* Pricing Section */}
+                  <div>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="text-lg text-slate-500 dark:text-slate-400 line-through">
+                        ${dynamicPricing.originalPrice?.toLocaleString()}
+                      </div>
+                      <div className="text-4xl font-bold text-slate-900 dark:text-white transition-colors duration-300">
+                        ${dynamicPricing.price?.toLocaleString()}
+                      </div>
+                      <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg animate-pulse">
+                        <div className="text-center">
+                          Save ${((dynamicPricing.originalPrice || 0) - (dynamicPricing.price || 0)).toLocaleString()}
                         </div>
                       </div>
                     </div>
@@ -800,7 +804,7 @@ const ProductPage = () => {
                               {/* AutoVision Platform Image */}
                               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
                                 <img 
-                                  src="https://connectedwise.store/vision2.com/media/autovision.png" 
+                                  src="https://connectedwise.store/vision2.com/media/AutoVision.png" 
                                   alt="AutoVision 3D ADAS Platform"
                                   className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
