@@ -589,6 +589,13 @@ const ProductPage = () => {
                   </div>
                 </div>
               )}
+            </>
+          ) : null}
+          
+          <>
+            {activeProduct && (
+              <>
+                {/* Action Buttons */}
 
               {/* Action Buttons */}
               <div className="space-y-4">
