@@ -569,23 +569,7 @@ const ProductPage = () => {
                     </div>
                   </div>
 
-                  {/* Pricing Section */}
-                  <div>
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="text-lg text-slate-500 dark:text-slate-400 line-through">
-                        ${dynamicPricing.originalPrice?.toLocaleString()}
-                      </div>
-                      <div className="text-4xl font-bold text-slate-900 dark:text-white transition-colors duration-300">
-                        ${dynamicPricing.price?.toLocaleString()}
-                      </div>
-                      <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg animate-pulse">
-                        <div className="text-center">
-                          Save ${((dynamicPricing.originalPrice || 0) - (dynamicPricing.price || 0)).toLocaleString()}
-                        </div>
-                      </div>
-                    </div>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 transition-colors duration-300">Introductory Offer - Only 19 Left</p>
-                    <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2">
                       <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
                         ROS2 Native
                       </span>
@@ -593,7 +577,13 @@ const ProductPage = () => {
                         3D Visualization
                       </span>
                       <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                        Multi-threading
+                          Multi-Threading
+                        </span>
+                        <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                          Modular Design
+                        </span>
+                        <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                          Real-time Processing
                       </span>
                     </div>
                   </div>
