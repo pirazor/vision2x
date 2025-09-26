@@ -579,9 +579,9 @@ const ProductPage = () => {
                           </div>
                         </div>
                       </div>
-                     <>
-                    </div>
+                    <>
                     <p className="text-sm text-slate-600 dark:text-slate-400 transition-colors duration-300">Introductory Offer - Only 19 Left</p>
+                    </>
                    </>
                   </div>
                 </div>
