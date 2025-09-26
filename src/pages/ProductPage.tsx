@@ -578,10 +578,10 @@ const ProductPage = () => {
                             <span className="bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-2 py-1 rounded-md text-xs font-medium">Development Framework</span>
                           </div>
                         </div>
+                      <>
                       </div>
-                    <>
                     <p className="text-sm text-slate-600 dark:text-slate-400 transition-colors duration-300">Introductory Offer - Only 19 Left</p>
-                    </>
+                      </>
                    </>
                   </div>
                 </div>
