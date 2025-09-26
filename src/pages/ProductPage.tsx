@@ -193,7 +193,7 @@ const productData = {
     available: false,
     priceId: '',
     mode: 'payment' as const,
-    image: '/VisionConnect.png',
+    image: 'https://connectedwise.store/vision2.com/media/VisionConnect.png',
     media: [
       { type: 'image', src: 'https://connectedwise.store/vision2.com/media/VisionConnect.png', alt: 'VisionConnect Platform' }
     ],
