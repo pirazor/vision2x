@@ -804,7 +804,7 @@ const ProductPage = () => {
                               {/* AutoVision Platform Image */}
                               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
                                 <img 
-                                  src="https://connectedwise.store/vision2.com/media/AutoVision.png" 
+                                  src="https://connectedwise.store/vision2.com/media/autovision.png" 
                                   alt="AutoVision 3D ADAS Platform"
                                   className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
