@@ -504,7 +504,7 @@ const ProductPage = () => {
                         <Play className="w-8 h-8 text-white" />
                       </div>
                     </div>
-                  </>
+                  </div>
                 ) : null}
               </div>
 
