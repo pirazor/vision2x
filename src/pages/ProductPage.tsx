@@ -100,7 +100,7 @@ const productData = {
     mode: 'payment' as const,
     image: 'https://connectedwise.store/vision2.com/media/VisionRide.png',
     media: [
-      { type: 'image', src: '/VisionRide.png', alt: 'VisionRide Platform' }
+      { type: 'image', src: 'https://connectedwise.store/vision2.com/media/VisionRide.png', alt: 'VisionRide Platform' }
     ],
     features: [
       'Real-time Collision Detection',
