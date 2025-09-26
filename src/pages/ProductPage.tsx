@@ -585,17 +585,18 @@ const ProductPage = () => {
                       </div>
                     </div>
                     <p className="text-sm text-slate-600 dark:text-slate-400 transition-colors duration-300">Introductory Offer - Only 19 Left</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                        ROS2 Native
-                      </span>
-                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                        3D Visualization
-                      </span>
-                      <span className="px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
-                        Multi-threading
-                      </span>
+                  </div>
+                </div>
+              )}
+
+              {/* Pricing for unavailable products */}
+              {!product.available && (
+                <div className="bg-slate-100 dark:bg-slate-700 rounded-xl p-6 mb-6 border-2 border-dashed border-slate-300 dark:border-slate-600 transition-colors duration-300">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-slate-600 dark:text-slate-400 mb-2 transition-colors duration-300">
+                      Coming Soon
                     </div>
+                    <p className="text-sm text-slate-500 dark:text-slate-500 transition-colors duration-300">This product is currently in development</p>
                   </div>
                 </div>
               )}
@@ -843,27 +844,18 @@ const ProductPage = () => {
                               </div>
 
                               {/* Platform Features */}
-                              <div className="space-y-4">
-                                <div className="flex items-center space-x-2 text-teal-500 dark:text-teal-400">
-                                  <span>🏗️</span>
-                                  <span className="font-medium">Modular Architecture</span>
-                                </div>
-                                <div className="flex items-center space-x-2 text-orange-500 dark:text-orange-400">
-                                  <span>⚡</span>
-                                  <span className="font-medium">Real-time Processing</span>
-                                </div>
-                                <div className="flex flex-wrap gap-2">
-                                  <span className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-gray-200 dark:border-slate-600">
-                                    ROS2 Native
-                                  </span>
-                                  <span className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-gray-200 dark:border-slate-600">
-                                    3D Visualization
-                                  </span>
-                                  <span className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-gray-200 dark:border-slate-600">
-                                    Multi-threading
-                                  </span>
-                                </div>
-                              </div>
+                              <ul className="text-slate-600 dark:text-slate-400 text-xs space-y-1">
+                                <li>• Native ROS2 support (Humble and Iron)</li>
+                                <li>• 3D visualization and debugging interface</li>
+                                <li>• Advanced sensor fusion algorithms</li>
+                                <li>• Real-time data logging and replay</li>
+                                <li>• Modular perception pipeline architecture</li>
+                                <li>• Custom ADAS application development framework</li>
+                                <li>• Stereo vision-based depth estimation</li>
+                                <li>• Seamless robotics workflow integration</li>
+                                <li>• Professional development tools and APIs</li>
+                                <li>• Multi-threading and GPU acceleration support</li>
+                              </ul>
 
                               {/* GitHub Repository */}
                               <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-800/30">
