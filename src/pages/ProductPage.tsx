@@ -98,7 +98,7 @@ const productData = {
     available: false,
     priceId: '',
     mode: 'payment' as const,
-    image: '/VisionRide.png',
+    image: 'https://connectedwise.store/vision2.com/media/VisionRide.png',
     media: [
       { type: 'image', src: '/VisionRide.png', alt: 'VisionRide Platform' }
     ],
