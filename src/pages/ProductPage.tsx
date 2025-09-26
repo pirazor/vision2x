@@ -844,18 +844,27 @@ const ProductPage = () => {
                               </div>
 
                               {/* Platform Features */}
-                              <ul className="text-slate-600 dark:text-slate-400 text-xs space-y-1">
-                                <li>• Native ROS2 support (Humble and Iron)</li>
-                                <li>• 3D visualization and debugging interface</li>
-                                <li>• Advanced sensor fusion algorithms</li>
-                                <li>• Real-time data logging and replay</li>
-                                <li>• Modular perception pipeline architecture</li>
-                                <li>• Custom ADAS application development framework</li>
-                                <li>• Stereo vision-based depth estimation</li>
-                                <li>• Seamless robotics workflow integration</li>
-                                <li>• Professional development tools and APIs</li>
-                                <li>• Multi-threading and GPU acceleration support</li>
-                              </ul>
+                              <div className="space-y-4">
+                                <div className="flex items-center space-x-2 text-teal-500 dark:text-teal-400">
+                                  <span>🏗️</span>
+                                  <span className="font-medium">Modular Architecture</span>
+                                </div>
+                                <div className="flex items-center space-x-2 text-orange-500 dark:text-orange-400">
+                                  <span>⚡</span>
+                                  <span className="font-medium">Real-time Processing</span>
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                  <span className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-gray-200 dark:border-slate-600">
+                                    ROS2 Native
+                                  </span>
+                                  <span className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-gray-200 dark:border-slate-600">
+                                    3D Visualization
+                                  </span>
+                                  <span className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-gray-200 dark:border-slate-600">
+                                    Multi-threading
+                                  </span>
+                                </div>
+                              </div>
 
                               {/* GitHub Repository */}
                               <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-800/30">
