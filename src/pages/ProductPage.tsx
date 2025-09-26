@@ -844,18 +844,34 @@ const ProductPage = () => {
                               </div>
 
                               {/* Platform Features */}
-                              <ul className="text-slate-600 dark:text-slate-400 text-xs space-y-1">
-                                <li>• Native ROS2 support (Humble and Iron)</li>
-                                <li>• 3D visualization and debugging interface</li>
-                                <li>• Advanced sensor fusion algorithms</li>
-                                <li>• Real-time data logging and replay</li>
-                                <li>• Modular perception pipeline architecture</li>
-                                <li>• Custom ADAS application development framework</li>
-                                <li>• Stereo vision-based depth estimation</li>
-                                <li>• Seamless robotics workflow integration</li>
-                                <li>• Professional development tools and APIs</li>
-                                <li>• Multi-threading and GPU acceleration support</li>
-                              </ul>
+                              <div>
+                                <div className="flex flex-wrap gap-2">
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    ROS2 Native
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    3D Visualization
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Sensor Fusion
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Real-time Logging
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Modular Pipeline
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    ADAS Framework
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Stereo Vision
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    GPU Acceleration
+                                  </span>
+                                </div>
+                              </div>
 
                               {/* GitHub Repository */}
                               <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-800/30">
