@@ -737,7 +737,7 @@ const ProductPage = () => {
                                 <img 
                                   src="https://connectedwise.store/vision2.com/media/object-detect.png" 
                                   alt="Object Detection Visualization"
-                                  className="w-full h-auto object-cover"
+                                  className="w-full h-[260px] object-cover"
                                 />
                               </div>
                               
@@ -753,24 +753,24 @@ const ProductPage = () => {
                               
                               <div className="grid grid-cols-3 gap-2">
                                 <div className="text-center">
-                                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-lg p-2 border border-blue-200 dark:border-blue-800/40">
-                                    <div className="text-lg font-bold text-blue-600 dark:text-blue-400 mb-1">54%</div>
-                                    <div className="text-xs font-medium text-blue-700 dark:text-blue-300">Nano</div>
-                                    <div className="text-xs text-blue-600 dark:text-blue-400">mAP@50</div>
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-2 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-1">54%</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">Nano</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500">mAP@50</div>
                                   </div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30 rounded-lg p-2 border border-purple-200 dark:border-purple-800/40">
-                                    <div className="text-lg font-bold text-purple-600 dark:text-purple-400 mb-1">65%</div>
-                                    <div className="text-xs font-medium text-purple-700 dark:text-purple-300">Small</div>
-                                    <div className="text-xs text-purple-600 dark:text-purple-400">mAP@50</div>
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-2 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-1">65%</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">Small</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500">mAP@50</div>
                                   </div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/30 rounded-lg p-2 border border-green-200 dark:border-green-800/40">
-                                    <div className="text-lg font-bold text-green-600 dark:text-green-400 mb-1">71%</div>
-                                    <div className="text-xs font-medium text-green-700 dark:text-green-300">Medium</div>
-                                    <div className="text-xs text-green-600 dark:text-green-400">mAP@50</div>
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-2 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-1">71%</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">Medium</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500">mAP@50</div>
                                   </div>
                                 </div>
                               </div>
@@ -787,10 +787,10 @@ const ProductPage = () => {
                               </div>
 
                               {/* Tracking Technology */}
-                              <div className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-900/10 dark:to-amber-900/10 rounded-xl p-4 border border-orange-200 dark:border-orange-800/30">
+                              <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-700">
                                 <div className="flex items-center space-x-2 mb-2">
-                                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                                  <h5 className="text-sm font-semibold text-orange-800 dark:text-orange-300">Multi-Object Tracking</h5>
+                                  <div className="w-2 h-2 bg-slate-500 rounded-full"></div>
+                                  <h5 className="text-sm font-semibold text-slate-700 dark:text-slate-300">Multi-Object Tracking</h5>
                                 </div>
                                 <p className="text-sm text-slate-700 dark:text-slate-300">
                                   BoT-SORT tracker for robust object tracking across frames with state-of-the-art accuracy
@@ -798,15 +798,103 @@ const ProductPage = () => {
                               </div>
                             </div>
                           )}
-                          
+
+                          {capability.name === 'Traffic Sign & Light Recognition' && (
+                            <div className="space-y-4">
+                              {/* Traffic Sign Detection Image */}
+                              <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
+                                <img
+                                  src="https://connectedwise.store/vision2.com/media/traffic-signs.png"
+                                  alt="Traffic Sign & Light Recognition"
+                                  className="w-full h-[260px] object-cover"
+                                />
+                              </div>
+
+                              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0">
+                                <h5 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white" style={{ lineHeight: '1.65' }}>MobileNetV4 Model</h5>
+                                <div className="flex space-x-2">
+                                  <span className="bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 px-2 py-1 rounded-full text-xs font-medium">
+                                    55 US Signs
+                                  </span>
+                                  <span className="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 px-2 py-1 rounded-full text-xs font-medium">
+                                    Traffic Lights
+                                  </span>
+                                </div>
+                              </div>
+                              <div className="text-sm text-slate-700 dark:text-slate-300">
+                                State-of-the-art accuracy with highly efficient inference for real-time traffic sign recognition and traffic light color status detection
+                              </div>
+
+                              {/* Performance Metrics */}
+                              <div className="grid grid-cols-3 gap-2">
+                                <div className="text-center">
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-2 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-1">98.7%</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">Sign Detection</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500">Accuracy</div>
+                                  </div>
+                                </div>
+                                <div className="text-center">
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-2 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-1">99.2%</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">Light Status</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500">Accuracy</div>
+                                  </div>
+                                </div>
+                                <div className="text-center">
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-2 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-1">&lt;25ms</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">Inference</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500">Latency</div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Sign Categories */}
+                              <div>
+                                <div className="flex flex-wrap gap-2">
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Speed Limits
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Stop Signs
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Yield Signs
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Warning Signs
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Regulatory Signs
+                                  </span>
+                                  <span className="bg-gray-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-xs font-medium">
+                                    Construction Signs
+                                  </span>
+                                </div>
+                              </div>
+
+                              {/* Batch Processing */}
+                              <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-700">
+                                <div className="flex items-center space-x-2 mb-2">
+                                  <div className="w-2 h-2 bg-slate-500 rounded-full"></div>
+                                  <h5 className="text-sm font-semibold text-slate-700 dark:text-slate-300">Batch Processing</h5>
+                                </div>
+                                <p className="text-sm text-slate-700 dark:text-slate-300">
+                                  Optimized for edge devices with state-of-the-art accuracy and minimal computational overhead, perfect for real-time autonomous driving applications
+                                </p>
+                              </div>
+                            </div>
+                          )}
+
                           {capability.name === 'ADAS Platform & ROS Integration' && (
                             <div className="space-y-4">
                               {/* AutoVision Platform Image */}
                               <div className="rounded-lg overflow-hidden border border-gray-200 dark:border-slate-600">
                                 <img 
-                                  src="https://connectedwise.store/vision2.com/media/AutoVision.png" 
+                                  src="https://connectedwise.store/vision2.com/media/autovision.png" 
                                   alt="AutoVision 3D ADAS Platform"
-                                  className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                                  className="w-full h-[260px] object-cover"
                                 />
                               </div>
                               
@@ -825,20 +913,27 @@ const ProductPage = () => {
                                 Complete ADAS development environment with 3D visualization tools and native ROS2 integration for advanced autonomous vehicle research and development.
                               </div>
                               
-                              {/* Platform Components */}
-                              <div className="grid grid-cols-2 gap-3">
+                              {/* Platform Metrics */}
+                              <div className="grid grid-cols-3 gap-2">
                                 <div className="text-center">
-                                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-lg p-3 border border-purple-200 dark:border-purple-800/30">
-                                    <div className="text-lg font-bold text-purple-600 dark:text-purple-400 mb-1">🏗️</div>
-                                    <div className="text-xs font-medium text-purple-700 dark:text-purple-300">Modular</div>
-                                    <div className="text-xs text-purple-600 dark:text-purple-400 mt-1">Architecture</div>
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-2 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-1">±1"</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">Accuracy</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500">@120ft</div>
                                   </div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-lg p-3 border border-orange-200 dark:border-orange-800/30">
-                                    <div className="text-lg font-bold text-orange-600 dark:text-orange-400 mb-1">🚀</div>
-                                    <div className="text-xs font-medium text-orange-700 dark:text-orange-300">High</div>
-                                    <div className="text-xs text-orange-600 dark:text-orange-400 mt-1">Performance</div>
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-2 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-1">&lt;10ms</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">Network</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500">Latency</div>
+                                  </div>
+                                </div>
+                                <div className="text-center">
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-2 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-lg font-bold text-slate-700 dark:text-slate-300 mb-1">120°</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">Front FOV</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500">Coverage</div>
                                   </div>
                                 </div>
                               </div>
@@ -874,10 +969,10 @@ const ProductPage = () => {
                               </div>
 
                               {/* GitHub Repository */}
-                              <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-800/30">
+                              <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-700">
                                 <div className="flex items-center space-x-2 mb-2">
                                   <div className="w-2 h-2 bg-slate-500 rounded-full"></div>
-                                  <h5 className="text-sm font-semibold text-slate-800 dark:text-slate-300">GitHub Repository</h5>
+                                  <h5 className="text-sm font-semibold text-slate-700 dark:text-slate-300">GitHub Repository</h5>
                                 </div>
                                 <p className="text-sm text-slate-700 dark:text-slate-300">
                                   Complete source code available on GitHub with comprehensive documentation and examples
@@ -892,7 +987,7 @@ const ProductPage = () => {
                                 <img 
                                   src="https://connectedwise.store/vision2.com/media/lane-detection.png" 
                                   alt="Lane Detection Visualization"
-                                  className="w-full h-auto object-cover"
+                                  className="w-full h-[260px] object-cover"
                                 />
                               </div>
                               
@@ -909,17 +1004,17 @@ const ProductPage = () => {
                               {/* Performance Metrics */}
                               <div className="grid grid-cols-2 gap-3">
                                 <div className="text-center">
-                                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-3 border border-blue-200 dark:border-blue-800/30">
-                                    <div className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-1">81.5%</div>
-                                    <div className="text-xs font-medium text-blue-700 dark:text-blue-300">CULane</div>
-                                    <div className="text-xs text-blue-600 dark:text-blue-400 mt-1">F1 Score</div>
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-3 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-xl font-bold text-slate-700 dark:text-slate-300 mb-1">81.5%</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">CULane</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500 mt-1">F1 Score</div>
                                   </div>
                                 </div>
                                 <div className="text-center">
-                                  <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-lg p-3 border border-green-200 dark:border-green-800/30">
-                                    <div className="text-xl font-bold text-green-600 dark:text-green-400 mb-1">95%</div>
-                                    <div className="text-xs font-medium text-green-700 dark:text-green-300">TuSimple</div>
-                                    <div className="text-xs text-green-600 dark:text-green-400 mt-1">F1 Score</div>
+                                  <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 rounded-lg p-3 border border-slate-200 dark:border-slate-700">
+                                    <div className="text-xl font-bold text-slate-700 dark:text-slate-300 mb-1">95%</div>
+                                    <div className="text-xs font-medium text-slate-600 dark:text-slate-400">TuSimple</div>
+                                    <div className="text-xs text-slate-500 dark:text-slate-500 mt-1">F1 Score</div>
                                   </div>
                                 </div>
                               </div>
@@ -940,10 +1035,10 @@ const ProductPage = () => {
                               </div>
 
                               {/* TensorRT Optimization */}
-                              <div className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-900/10 dark:to-amber-900/10 rounded-xl p-4 border border-orange-200 dark:border-orange-800/30">
+                              <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/10 dark:to-gray-900/10 rounded-xl p-4 border border-slate-200 dark:border-slate-700">
                                 <div className="flex items-center space-x-2 mb-2">
-                                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                                  <h5 className="text-sm font-semibold text-orange-800 dark:text-orange-300">TensorRT Acceleration</h5>
+                                  <div className="w-2 h-2 bg-slate-500 rounded-full"></div>
+                                  <h5 className="text-sm font-semibold text-slate-700 dark:text-slate-300">TensorRT Acceleration</h5>
                                 </div>
                                 <p className="text-sm text-slate-700 dark:text-slate-300">
                                   Optimized for NVIDIA hardware with significant performance improvements over baseline models
